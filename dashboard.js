@@ -5,7 +5,11 @@
 
 function quickCheckIn(projectId) {
     navigate('projecto', { id: projectId, tab: 'obra' });
-    setTimeout(() => openAddVisitModal(projectId), 250);
+    setTimeout(() => {
+        if (typeof openAddVisitModal === 'function') {
+            openAddVisitModal(projectId);
+        }
+    }, 400);
 }
 
 function renderAttentionPanel() {

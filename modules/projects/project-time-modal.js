@@ -64,8 +64,8 @@ function saveManualTime(projectId) {
     const date     = document.getElementById('manualTimeDate').value;
     const billable = document.getElementById('manualTimeBill').checked;
 
-    if (!phaseKey || !hours || !desc) {
-        showToast('Preencha todos os campos');
+    if (!phaseKey || isNaN(hours) || hours <= 0 || !desc) {
+        showToast('Preencha todos os campos com valores válidos');
         return;
     }
 

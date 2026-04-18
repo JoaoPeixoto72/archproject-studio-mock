@@ -4,7 +4,7 @@
 // ============================================================================
 
 function canAccess(userRole, visibility) {
-    if (!visibility || visibility.length === 0) return userRole === 'admin';
+    if (!visibility || visibility.length === 0) return true;
     return visibility.includes(userRole);
 }
 

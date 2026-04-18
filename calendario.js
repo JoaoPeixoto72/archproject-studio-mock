@@ -120,7 +120,7 @@ function renderMonthView(events) {
             </div>
 
             <!-- Grelha -->
-            <div style="display:grid; grid-template-columns:repeat(7, 1fr); background:#eee; gap:1px;">
+            <div style="display:grid; grid-template-columns:repeat(7, 1fr); background:#eee; gap:1px; border:1px solid #eee; padding:1px;">
                 ${daysOfWeek.map(d => `<div style="background:#f9fafb; padding:12px; text-align:center; font-size:10px; font-weight:800; text-transform:uppercase; color:#9ca3af; letter-spacing:1px;">${d}</div>`).join('')}
                 
                 ${Array(offset).fill(0).map(() => `<div style="background:#fdfdfd; min-height:120px; padding:10px;"></div>`).join('')}
