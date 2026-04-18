@@ -86,7 +86,7 @@ function renderProjectDocuments(proj) {
 
         group.docs.forEach((doc, i) => {
             const isPhoto = doc.fileType === 'photo';
-            const icon = isPhoto ? '🖼️' : '📄';
+            const icon = isPhoto ? '📷' : '📄';
             
             html += `
                 <div style="display:flex; align-items:center; gap:14px; padding:12px 18px; ${i < group.docs.length - 1 ? 'border-bottom:1px solid #f0ece7;' : ''} cursor:pointer; transition:background 0.15s;"

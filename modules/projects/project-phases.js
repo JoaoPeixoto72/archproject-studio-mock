@@ -143,7 +143,7 @@ function viewDeliverableModal(projectId, phaseKey, deliverableId) {
     const notes = del.notes || [];
 
     const docList = docs.length > 0 ? docs.map(d => `<div style="font-size:12px; color:#111827; padding:4px 0; border-bottom:1px dashed #e5e7eb;">📄 ${esc(d.filename)}</div>`).join('') : '<p style="font-size:11px; color:#9ca3af;">Sem documentos.</p>';
-    const photoList = photos.length > 0 ? photos.map(p => `<div style="font-size:12px; color:#111827; padding:4px 0; border-bottom:1px dashed #e5e7eb;">🖼️ ${esc(p.filename)}</div>`).join('') : '<p style="font-size:11px; color:#9ca3af;">Sem fotografias.</p>';
+    const photoList = photos.length > 0 ? photos.map(p => `<div style="font-size:12px; color:#111827; padding:4px 0; border-bottom:1px dashed #e5e7eb;">📷 ${esc(p.filename)}</div>`).join('') : '<p style="font-size:11px; color:#9ca3af;">Sem fotografias.</p>';
     const notesList = notes.length > 0 ? notes.map(n => `
         <div style="padding:8px 0; border-bottom:1px dashed #e5e7eb; position:relative;">
             <p style="font-size:12px; margin:0 0 4px; color:#111827;">${esc(n.text)}</p>
