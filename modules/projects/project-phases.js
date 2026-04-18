@@ -533,33 +533,28 @@ function openAddDeliverableModal(projectId, phaseKey) {
         </div>
     `;
     const footer = `
-        <button class="btn btn-primary" onclick="addDeliverable('${projectId}','${phaseKey}')">Adicionar</button>
+        <button class="btn btn-primary" onclick="addDeliverableFromModal('${projectId}','${phaseKey}')">Adicionar</button>
         <button class="btn btn-secondary" onclick="closeModal()">Cancelar</button>
     `;
     openModal('Novo Entregável', body, footer);
 }
 
-function addDeliverable(projectId, phaseKey) {
+function addDeliverableFromModal(projectId, phaseKey) {
     const phase = getPhase(projectId, phaseKey);
     if (!phase) return;
     const name = document.getElementById('newDelName').value.trim();
     if (!name) { showToast('Nome é obrigatório'); return; }
 
-    phase.deliverables.push({
-        id: generateId(),
+    const delData = {
         name: name,
         description: document.getElementById('newDelDesc').value.trim(),
-        status: 'pending',
-        responsible: document.getElementById('newDelResp').value || null,
-        visibility: ['admin', 'member'],
-        notes: [],
-        documents: []
-    });
+        responsible: document.getElementById('newDelResp').value || null
+    };
 
-    addHistoryEntry(projectId, 'Adicionou entregável', name, phaseKey);
+    addDeliverable(projectId, phaseKey, delData);
+    
     closeModal();
     showToast('Entregável adicionado');
-    persistAll();
     handleRoute();
 }
 

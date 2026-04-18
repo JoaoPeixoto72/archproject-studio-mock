@@ -336,18 +336,7 @@ function openDocVersionsModal(projectId, deliverableId, docId) {
     openModal('Histórico — ' + doc.filename, body, footer);
 }
 
-function updateDocStatus(projectId, deliverableId, docId, newStatus) {
-    const result = getDeliverable(projectId, deliverableId);
-    if (!result) return;
-    const doc = result.deliverable.documents.find(d => d.id === docId);
-    if (!doc) return;
-    
-    doc.status = newStatus;
-    addHistoryEntry(projectId, 'Alterou estado', doc.filename + ' → ' + newStatus, result.phase.key);
-    showToast('Estado actualizado');
-    persistAll();
-    handleRoute();
-}
+
 
 
 // ============================================================================

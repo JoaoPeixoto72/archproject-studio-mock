@@ -590,7 +590,7 @@ function renderPortalExterno(externalId) {
                         <p style="font-size:12px; font-weight:700; color:#fff; margin:0;">${esc(ext.name)}</p>
                         <p style="font-size:10px; color:#9a928a; margin:0;">${esc(ext.specialty)}</p>
                     </div>
-                    <button style="background:#332f2c; color:#fff; border:none; padding:8px 16px; font-size:11px; font-weight:700; cursor:pointer; text-transform:uppercase; letter-spacing:0.5px;" onclick="navigate('equipa')">Sair</button>
+                    <button style="background:#332f2c; color:#fff; border:none; padding:8px 16px; font-size:11px; font-weight:700; cursor:pointer; text-transform:uppercase; letter-spacing:0.5px;" onclick="exitPortal()">Sair</button>
                 </div>
             </div>
 
