@@ -1,0 +1,401 @@
+# GRELHA FINAL DE AVALIAÇÃO  
+## App de gestão de produção para gabinete de arquitetura
+
+## Escala de pontuação
+Usar nota de **0 a 10** em cada eixo:
+
+- **0–2** = muito fraco
+- **3–4** = fraco
+- **5–6** = aceitável / incompleto
+- **7–8** = bom / sólido
+- **9–10** = excelente / muito bem resolvido
+
+---
+
+# 1. FACILIDADE DE UTILIZAÇÃO IMEDIATA — 20%
+
+### O que avalia
+Se a app é intuitiva, clara e rápida de aprender para utilizadores reais do gabinete.
+
+### Perguntas de avaliação
+- Um arquiteto percebe rapidamente como a app funciona?
+- Um estagiário consegue fazer tarefas básicas sem ajuda?
+- As ações mais frequentes são simples?
+- A navegação é clara?
+- A linguagem é natural e ligada ao setor?
+- A app transmite leveza ou parece pesada?
+- A interface ajuda ou obriga a pensar demasiado?
+
+### Sinais positivos
+- menus simples
+- ações frequentes em poucos cliques
+- labels claras
+- boa hierarquia visual
+- pouca carga cognitiva
+- sensação de fluidez
+
+### Sinais negativos
+- excesso de módulos
+- demasiados campos
+- labels confusas
+- muita densidade visual
+- necessidade de formação para tarefas simples
+
+---
+
+# 2. ADEQUAÇÃO AO FLUXO REAL DE TRABALHO DE ARQUITETURA — 15%
+
+### O que avalia
+Se a app reflete o trabalho real de um gabinete de arquitetura e não um gestor genérico de projetos.
+
+### Perguntas de avaliação
+- A app acompanha as fases reais de um projeto de arquitetura?
+- Suporta projeto, licenciamento, especialidades, execução e assistência?
+- Aceita diferentes ritmos e frentes de trabalho?
+- Está pensada para produção real e não só para gestão abstrata?
+- Faz sentido para gabinetes de pequena, média ou maior dimensão?
+- Os templates por tipologia fazem sentido?
+
+### Sinais positivos
+- estrutura coerente com prática real
+- tipologias e templates úteis
+- relação entre projeto, documentos, cliente e obra
+- linguagem alinhada com arquitetura
+
+### Sinais negativos
+- app demasiado genérica
+- tratamento superficial do processo
+- falta de noção de licenciamento, especialidades ou obra
+- estrutura mais próxima de software house do que de gabinete
+
+---
+
+# 3. PROJETO COMO CENTRO OPERACIONAL — 12%
+
+### O que avalia
+Se o projeto é o núcleo do sistema e concentra a operação real.
+
+### Perguntas de avaliação
+- O projeto funciona como cockpit operacional?
+- Dentro do projeto é possível perceber estado, prioridades, bloqueios, documentos, tempo e obra?
+- O utilizador consegue trabalhar a partir da página do projeto?
+- A informação está centrada no contexto do projeto ou dispersa em módulos soltos?
+
+### Sinais positivos
+- página de projeto forte
+- visão geral operacional
+- tabs ou secções úteis e coerentes
+- pouco salto entre módulos
+
+### Sinais negativos
+- informação dispersa
+- projeto tratado como ficha passiva
+- demasiada navegação lateral para resolver tarefas simples
+
+---
+
+# 4. FASES PARALELAS E DEPENDÊNCIAS — 12%
+
+### O que avalia
+Se a app entende que as fases nem sempre são lineares e se consegue mostrar dependências reais de forma clara.
+
+### Perguntas de avaliação
+- As fases podem acontecer em paralelo?
+- As dependências são fáceis de perceber?
+- É claro o que está bloqueado, porquê e por quem?
+- A app distingue entre fase ativa, pronta, pendente e bloqueada?
+- As dependências ajudam a decidir o que fazer a seguir?
+- O sistema impede avançar quando falta uma dependência crítica?
+
+### Sinais positivos
+- leitura clara de bloqueios
+- paralelismo visível
+- dependências úteis e operacionais
+- ligação entre fases, entregáveis e aprovações
+
+### Sinais negativos
+- sequência rígida artificial
+- dependências só decorativas
+- não se percebe a causa do bloqueio
+- fases tratadas como lista estática
+
+---
+
+# 5. CONTROLO DE VISIBILIDADE E MULTI-PERSPETIVA — 10%
+
+### O que avalia
+Se diferentes perfis veem apenas o que lhes compete, com boa experiência em cada perspetiva.
+
+### Perguntas de avaliação
+- O gabinete vê tudo o que precisa?
+- O cliente vê só o que deve ver?
+- O colaborador externo vê apenas a sua missão?
+- Há controlo de partilha por projeto, documento ou área?
+- A experiência do cliente parece profissional e completa?
+- A experiência do externo é limitada mas útil?
+
+### Perfis mínimos esperados
+- gabinete
+- cliente
+- externo / consultor / fornecedor
+
+### Sinais positivos
+- vistas separadas e coerentes
+- visibilidade granular
+- cliente não entra na área interna
+- externo não navega por informação irrelevante
+
+### Sinais negativos
+- tudo ou nada
+- portal cliente fraco
+- áreas mal separadas
+- permissões pouco claras
+
+---
+
+# 6. RASTREABILIDADE PRÁTICA — 10%
+
+### O que avalia
+Se a app guarda o histórico útil do projeto de forma simples e acionável.
+
+### Perguntas de avaliação
+- Dá para saber quantas vezes se foi à obra?
+- Quem foi, quando foi, o que foi registado?
+- As horas estão ligadas ao projeto e à fase?
+- As decisões com cliente ou equipa ficam registadas?
+- As aprovações têm data, autor e estado?
+- Os ficheiros têm histórico mínimo de alterações?
+- É fácil responder a perguntas do cliente ou da equipa com base no sistema?
+
+### Sinais positivos
+- histórico claro
+- decisões rastreadas
+- tempo registado com contexto
+- aprovações identificadas
+- visitas documentadas
+
+### Sinais negativos
+- histórico fraco
+- perda de contexto
+- ausência de prova do que foi decidido/aprovado
+- difícil responder a perguntas básicas
+
+---
+
+# 7. ACOMPANHAMENTO DE OBRA E VISITAS — 8%
+
+### O que avalia
+Se a app trata a obra como parte importante do processo e não como detalhe secundário.
+
+### Perguntas de avaliação
+- Há registo de visitas à obra?
+- Dá para guardar data, participantes, notas e fotos?
+- O histórico é fácil de consultar?
+- O cliente pode ver visitas quando fizer sentido?
+- O sistema ajuda a responder quantas visitas houve, quando e com que resultado?
+- Existe ligação entre obra, projeto e seguimento?
+
+### Sinais positivos
+- módulo de obra útil
+- visitas rápidas de registar
+- histórico consultável
+- fotos e observações bem integradas
+
+### Sinais negativos
+- obra mal resolvida
+- visitas tratadas como notas soltas
+- pouca utilidade prática
+- sem valor para cliente ou coordenação
+
+---
+
+# 8. GESTÃO DOCUMENTAL E ORGANIZAÇÃO DE FICHEIROS — 6%
+
+### O que avalia
+Se a documentação está organizada e controlada sem fricção desnecessária.
+
+### Perguntas de avaliação
+- Os ficheiros estão organizados por projeto e fase?
+- O upload é simples?
+- Há versionamento suficiente?
+- Há estado do documento?
+- É fácil encontrar um ficheiro?
+- O cliente e externos recebem só o que devem receber?
+
+### Estados recomendados
+- rascunho
+- em revisão
+- partilhado
+- aprovado
+- obsoleto
+
+### Sinais positivos
+- organização lógica
+- filtros úteis
+- revisão e partilha bem resolvidas
+- pesquisa eficaz
+
+### Sinais negativos
+- repositório genérico
+- naming manual caótico
+- ausência de estado
+- dificuldade em encontrar versões
+
+---
+
+# 9. COMUNICAÇÃO, INCIDÊNCIAS E PENDÊNCIAS — 4%
+
+### O que avalia
+Se a app ajuda a gerir dúvidas, pendências e comunicação operacional sem se perder em emails ou notas dispersas.
+
+### Perguntas de avaliação
+- Existe um sítio claro para ver o que está pendente?
+- Há registo de dúvidas, pedidos de informação ou observações?
+- A app distingue comunicação interna da externa?
+- As incidências têm responsável e estado?
+- O sistema ajuda a seguir o que está em aberto?
+
+### Sinais positivos
+- pendências centralizadas
+- notas e incidências organizadas
+- RFIs ou equivalente bem resolvidos
+- boa distinção entre interno e partilhado
+
+### Sinais negativos
+- tudo se perde em notas soltas
+- sem controlo de pendentes
+- comunicação dispersa
+
+---
+
+# 10. TEMPLATES, FLEXIBILIDADE E ESCALABILIDADE OPERACIONAL — 2%
+
+### O que avalia
+Se a app permite repetir estruturas úteis sem obrigar o gabinete a montar tudo de raiz.
+
+### Perguntas de avaliação
+- Há templates por tipologia?
+- O template pode ser copiado para novo projeto?
+- O projeto pode ser alterado depois?
+- É possível ocultar, acrescentar ou adaptar fases e nós?
+- A estrutura ajuda a ganhar tempo sem ficar rígida?
+
+### Sinais positivos
+- templates úteis
+- personalização por projeto
+- boa base para crescimento
+
+### Sinais negativos
+- tudo começa do zero
+- estrutura demasiado rígida
+- templates pouco úteis
+
+---
+
+# 11. SIMPLICIDADE SEM PERDER PROFUNDIDADE — 1%
+
+### O que avalia
+Se a app consegue mostrar o essencial no dia a dia e esconder o avançado sem o eliminar.
+
+### Perguntas de avaliação
+- O sistema mostra primeiro o essencial?
+- O avançado existe mas não cria ruído?
+- Há progressive disclosure?
+- O utilizador diário sente leveza?
+- A profundidade técnica aparece só quando necessária?
+
+### Sinais positivos
+- UX limpa
+- opções avançadas escondidas em “mais”
+- base simples com profundidade disponível
+
+### Sinais negativos
+- excesso de burocracia visível
+- simplificação pobre demais
+- ruído técnico constante
+
+---
+
+# TOTAL = 100%
+
+---
+
+# FÓRMULA DE AVALIAÇÃO FINAL
+
+Para cada eixo:
+- atribuir nota de **0 a 10**
+- multiplicar pelo peso correspondente
+
+### Exemplo
+Se um eixo tem peso 20% e a nota é 8:
+- 8 × 20 = 160
+
+No final:
+- somar tudo
+- dividir por 100
+
+### Resultado final
+Nota final de **0 a 10**
+
+---
+
+# LEITURA DA NOTA FINAL
+
+## 9.0 – 10
+Excelente  
+Muito forte como base real de produto para gabinete de arquitetura
+
+## 8.0 – 8.9
+Muito bom  
+Bem alinhado, com alguns pontos a refinar
+
+## 7.0 – 7.9
+Bom  
+Tem base útil, mas ainda com falhas importantes
+
+## 6.0 – 6.9
+Mediano  
+Promissor, mas ainda insuficiente como solução principal
+
+## Abaixo de 6
+Fraco  
+Desalinhado com as necessidades reais do gabinete
+
+---
+
+# CHECKLIST FINAL DE VALIDAÇÃO RÁPIDA
+
+Antes de fechar a avaliação, confirmar:
+
+- a app é fácil de usar no primeiro contacto
+- o projeto é claramente o centro
+- as fases paralelas estão bem tratadas
+- as dependências são claras e úteis
+- o cliente vê só o que deve ver
+- os externos têm área própria
+- as visitas à obra estão bem resolvidas
+- documentos e aprovações são rastreáveis
+- a app reduz perguntas repetitivas ao gabinete
+- a app ajuda mais do que burocratiza
+
+---
+
+# MODELO PRONTO A PREENCHER
+
+| Eixo | Peso | Nota (0-10) | Resultado |
+|---|---:|---:|---:|
+| Facilidade de utilização imediata | 20 |  |  |
+| Adequação ao fluxo real de arquitetura | 15 |  |  |
+| Projeto como centro operacional | 12 |  |  |
+| Fases paralelas e dependências | 12 |  |  |
+| Controlo de visibilidade e multi-perspetiva | 10 |  |  |
+| Rastreabilidade prática | 10 |  |  |
+| Acompanhamento de obra e visitas | 8 |  |  |
+| Gestão documental e ficheiros | 6 |  |  |
+| Comunicação, incidências e pendências | 4 |  |  |
+| Templates, flexibilidade e escalabilidade | 2 |  |  |
+| Simplicidade sem perder profundidade | 1 |  |  |
+| **Total** | **100** |  |  |
+
+---
+

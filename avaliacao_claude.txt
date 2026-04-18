@@ -1,0 +1,178 @@
+
+
+# Grelha de Avaliação — App de Gestão de Produção para Gabinetes de Arquitectura
+
+---
+
+## Camada 1 — Serve o trabalho real?
+
+### A. Adequação ao fluxo real de arquitectura (15%)
+
+A app entende o ciclo de vida de um projecto de arquitectura em Portugal? Suporta Programa Preliminar, Estudo Prévio, Anteprojecto, Licenciamento (Arquitectura + Especialidades), Execução, Assistência Técnica, Telas Finais? Aceita fases paralelas sem forçar sequência falsa? Permite dependências reais entre fases, entre entregáveis, entre aprovações, entre externos? Acomoda diferentes ritmos por fase? É um sistema de produção ou apenas gestão genérica disfarçada?
+
+**Pergunta-teste:** Um gabinete consegue mapear um projecto real inteiro dentro da app sem ter de inventar workarounds?
+
+**Red flags:** Trata arquitectura como projecto de software genérico. Tudo é linear. Não entende fases, aprovações, revisões, obra. É só um gestor de tarefas com outro nome.
+
+---
+
+### B. Centralidade no projecto (10%)
+
+O projecto é o núcleo do sistema? Fases, documentos, tempo, obra, decisões, partilhas, notas — tudo vive dentro do projecto ou está espalhado por módulos desconectados? A página do projecto funciona como cockpit operacional onde o arquitecto vê tudo o que precisa sem saltar entre secções?
+
+**Pergunta-teste:** Consigo abrir o projecto e em 10 segundos ter uma visão completa do que está a acontecer, do que está pendente e do que está bloqueado?
+
+**Red flags:** Informação espalhada por módulos sem núcleo claro. Documentos num lado, tempo noutro, obra noutro. O projecto é uma ficha e não um centro de trabalho.
+
+---
+
+### C. Fases paralelas e dependências (10%)
+
+As fases podem correr em paralelo? As dependências são claras, legíveis e operacionais — não apenas decorativas? O utilizador percebe o que pode avançar, o que está à espera, o que está bloqueado e porquê? As dependências existem entre fases, entre entregáveis, entre aprovações e entre externos?
+
+**Pergunta-teste:** Olho para o projecto e sei imediatamente que a submissão à câmara está bloqueada porque faltam 3 especialidades, e sei quais são e em que estado estão.
+
+**Red flags:** Gantt bonito mas inútil. Sequência rígida falsa. Não se percebe a causa do bloqueio. Dependências existem mas não impedem nem alertam.
+
+---
+
+### D. Gestão documental (10%)
+
+Upload e organização são simples? Existe versionamento? Documentos têm estados (trabalho interno, emitido, aprovado, obsoleto)? Estão ligados à fase e ao projecto? A pesquisa é rápida? A partilha é controlada por perfil? Há distinção entre o que é interno, o que vai ao cliente, o que vai ao externo?
+
+**Pergunta-teste:** Preciso da última versão aprovada da planta do piso 0 do licenciamento. Encontro-a em menos de 5 segundos?
+
+**Red flags:** Documentos tratados como anexos genéricos. Sem versões. Sem estado. Sem visibilidade por perfil. Sem noção de emissão ou aprovação. Renomear ficheiros manualmente como "v1_final_final2".
+
+---
+
+### E. Acompanhamento de obra (10%)
+
+Registo de visitas com data, quem esteve, fotos, notas e pendências? Histórico completo por projecto? Contagem automática? Informação visível ao cliente quando fizer sentido?
+
+**Pergunta-teste:** O cliente liga a perguntar quantas vezes foram à obra. A resposta está a um clique, com datas, fotos e resumos?
+
+**Red flags:** Obra aparece como módulo secundário mal resolvido. Não há histórico utilizável. Visitas não podem ser partilhadas com o cliente. Falta ligação entre obra e projecto.
+
+---
+
+### F. Registo de tempo (8%)
+
+Registar tempo é rápido — timer ou input manual com poucos cliques? O tempo está ligado à fase e ao projecto? Há distinção entre horas facturáveis e não facturáveis? O gabinete consegue ver quanto tempo gastou por fase e se está dentro do orçamento?
+
+**Pergunta-teste:** Começo a trabalhar no licenciamento de arquitectura. Em 2 cliques inicio o timer. Quando paro, o registo fica associado à fase correcta.
+
+**Red flags:** Registar tempo obriga a preencher formulários longos. Não há ligação entre tempo e fase. Não há noção de orçamento de horas.
+
+---
+
+## Camada 2 — É fácil de usar no dia-a-dia?
+
+### G. Usabilidade diária (15%)
+
+Navegação clara? Poucas acções para tarefas frequentes? Baixa carga cognitiva? Menus não excessivos? Boa hierarquia visual? Progressão natural? A app reduz fricção ou cria burocracia? Um estagiário no primeiro dia consegue usá-la sem formação? A linguagem é natural (não "workflow", "pipeline", "sprint") e adequada a arquitectos?
+
+**Pergunta-teste:** Três acções mais frequentes — upload de ficheiro, registar visita, ver estado de uma fase. Quantos cliques preciso para cada uma?
+
+**Red flags:** Menus a mais. Dashboards bonitos mas pouco úteis. Demasiados estados e labels. Excesso de campos obrigatórios. Necessidade de formação longa. Jargão de software.
+
+---
+
+### H. Portal do cliente (8%)
+
+O cliente vê só o que lhe compete? Vê progresso, aprovações pendentes, documentos partilhados, visitas à obra, próximos passos? A experiência transmite profissionalismo? Reduz perguntas repetitivas ao gabinete? O cliente sabe o que está pendente da parte dele?
+
+**Pergunta-teste:** Depois de activar o portal do cliente, o gabinete reduz em 50% os emails e chamadas do tipo "como está o meu projecto?"
+
+**Red flags:** Portal é uma cópia capada do gabinete. Cliente vê demasiado. Cliente vê de menos e continua a ligar. Falta clareza no que está pendente da parte dele.
+
+---
+
+### I. Perfis e permissões (7%)
+
+Separação clara entre gabinete, cliente, externo, admin, colaborador interno? Visibilidade por papel, por projecto, por documento? Segurança sem complexidade excessiva? Partilha granular sem obrigar a configuração por cada ficheiro individualmente?
+
+**Pergunta-teste:** Um engenheiro externo de estabilidade entra na app e vê apenas a sua fase, os seus documentos e nada mais. O gabinete configurou isto em menos de 1 minuto.
+
+**Red flags:** Permissões frágeis onde qualquer um vê quase tudo. Ou permissões tão complexas que ninguém as configura correctamente.
+
+---
+
+### J. Equilíbrio simplicidade / profundidade (5%)
+
+O sistema resolve o essencial sem parecer pobre? O avançado existe sem poluir? Progressive disclosure — "mais", "detalhes", "modo avançado"? A base serve o dia-a-dia e o detalhe técnico aparece só quando necessário?
+
+**Pergunta-teste:** Um gabinete de 3 pessoas usa a app de forma simples. Um gabinete de 15 pessoas usa a mesma app com mais profundidade. Ambos estão servidos.
+
+**Red flags:** Simplista demais e não resolve. Over-engineered e obriga a preencher burocracia para tudo. Parece mais um sistema estatal do que uma ferramenta de trabalho.
+
+---
+
+## Camada 3 — É sustentável como produto?
+
+### K. Templates e repetibilidade (5%)
+
+Templates por tipologia (residencial, comercial, reabilitação, interiores)? Cópia do template para o projecto com um clique? Projecto editável depois — esconder, remover, acrescentar nós? Dependências herdadas e ajustáveis? Reduz trabalho repetitivo no arranque de projectos novos?
+
+**Pergunta-teste:** Um novo projecto residencial arranca com template pré-configurado. O gabinete ajusta 2-3 coisas e começa a trabalhar em menos de 5 minutos.
+
+**Red flags:** Cada projecto começa do zero. Template rígido demais que não se adapta. Template tão abstracto que não ajuda.
+
+---
+
+### L. Qualidade UI/UX (3%)
+
+Hierarquia visual correcta? Legibilidade? Densidade adequada — nem vazia nem sufocante? Consistência entre ecrãs? Feedback visual claro? Estados vazios tratados? Acções primárias distinguem-se das secundárias? Sensação premium adequada ao sector — arquitectos são visuais.
+
+**Pergunta-teste:** Um arquitecto mostra a app a um cliente durante uma reunião. Sente orgulho ou vergonha?
+
+**Red flags:** Genérico demais (parece SaaS qualquer). Ruído visual excessivo. Bonito no Dribbble mas pobre no uso real. Branding polido mas fluxo confuso.
+
+---
+
+### M. Preparação para desenvolvimento real (2%)
+
+Estrutura coerente de ecrãs? Componentes repetíveis? Estados claros e consistentes? Entidades óbvias e mapeáveis para backend? Sistema de navegação coerente e escalável? Possibilidade de transformar num design system?
+
+**Pergunta-teste:** Um developer olha para o mock e consegue identificar as entidades, os estados, os fluxos e os componentes sem ambiguidade.
+
+**Red flags:** Mock inconsistente entre ecrãs. Ecrãs bonitos sem lógica. Não há modelo mental sólido. Impossível de escalar.
+
+---
+
+## Escala de pontuação
+
+**9.0–10** — Excelente. Base séria de produto, pronto para implementação.
+
+**8.0–8.9** — Muito bom. Base forte, precisa de refinamento em pontos específicos.
+
+**7.0–7.9** — Bom. Tem valor real mas existem falhas estruturais a corrigir.
+
+**6.0–6.9** — Mediano. Ideias boas mas não serve ainda como base principal.
+
+**Abaixo de 6** — Fraco. Pode ser bonito ou promissor mas está desalinhado do problema real.
+
+---
+
+## Resumo de pesos
+
+| Critério | Peso |
+|---|---:|
+| A. Adequação ao fluxo real | 15% |
+| G. Usabilidade diária | 15% |
+| B. Centralidade no projecto | 10% |
+| C. Fases e dependências | 10% |
+| D. Gestão documental | 10% |
+| E. Acompanhamento de obra | 10% |
+| F. Registo de tempo | 8% |
+| H. Portal do cliente | 8% |
+| I. Perfis e permissões | 7% |
+| J. Equilíbrio simpl./profundidade | 5% |
+| K. Templates e repetibilidade | 5% |
+| L. Qualidade UI/UX | 3% |
+| M. Preparação para dev real | 2% |
+| **Total** | **108%** |
+
+---
+
+Os pesos somam 108% — propositadamente. Os 8% extra permitem que um mock que seja excelente nas áreas de maior peso compense fraquezas nos critérios menores. A nota final é calculada sobre 100.

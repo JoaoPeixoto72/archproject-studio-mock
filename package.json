@@ -1,0 +1,15 @@
+{
+  "name": "archproject-studio-2026",
+  "version": "1.0.0",
+  "description": "ArchProject Studio 2026 - Gestão de Projectos de Arquitectura",
+  "main": "app.js",
+  "scripts": {
+    "start": "npx serve ."
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "serve": "^14.2.4"
+  }
+}

@@ -1,0 +1,257 @@
+# ArchProject — Simplificação da área de Projectos (Fases, Entregáveis e Documentos)
+
+Tens acesso a todos os ficheiros do projecto ArchProject.
+
+Quero simplificar a experiência dentro dos projectos, especialmente a tab **Fases e Entregáveis**.
+
+## Objectivo
+Transformar a área de Projectos numa estrutura mais clara e leve para uso diário num gabinete de arquitectura, sem over-engineering.
+
+---
+
+## PRINCÍPIOS
+
+1. Não fazer over-engineering.
+2. Não introduzir novas bibliotecas ou frameworks.
+3. Manter a estética actual.
+4. Respeitar o princípio simples/completo.
+5. Reutilizar o modelo actual sempre que possível.
+6. Não mexer no router, quotes, financeiro, portais ou sistema base de permissões.
+7. A tab **Fases e Entregáveis** deve ser um quadro operacional simples.
+8. A tab **Documentos** deve ser o lugar único para upload e gestão de ficheiros/fotografias.
+
+---
+
+## OBJECTIVO FUNCIONAL FINAL
+
+### Tab: Fases e Entregáveis
+Mostrar de forma clara:
+- fases
+- entregáveis
+- estado visual dos entregáveis
+- o que já foi colocado dentro de cada entregável
+- adicionar entregável
+- apagar entregável
+- adicionar/apagar notas
+
+**Não fazer upload nesta tab.**
+
+### Tab: Documentos
+Passa a ser o único lugar para:
+- carregar documentos
+- carregar fotografias
+- procurar
+- filtrar
+- ver histórico de versões
+- fazer preview/download
+
+### Tab: Obra e Visitas
+Mantém-se separada como está.
+
+---
+
+## IMPLEMENTAÇÃO
+
+### 1. Redefinir responsabilidades das tabs
+- `Fases e Entregáveis` = vista operacional simples
+- `Documentos` = biblioteca + uploads
+- não criar tab nova só para notas
+
+---
+
+### 2. Alterações mínimas ao modelo de dados
+Reutilizar `deliverable.documents`.
+
+Adicionar campo opcional a cada documento:
+```js
+fileType: 'document' | 'photo'
+```
+
+Regras:
+- documentos antigos sem `fileType` contam como `'document'`
+- upload de fotografia grava `fileType: 'photo'`
+
+Adicionar campo opcional ao entregável:
+```js
+notes: []
+```
+
+Formato mínimo da nota:
+```js
+{
+  id,
+  text,
+  author,
+  date
+}
+```
+
+Manter `phase.notes` para compatibilidade, mas não as usar como centro da nova UI.
+
+---
+
+### 3. Simplificar a tab Fases e Entregáveis
+Substituir a renderização actual por uma vista mais simples.
+
+#### Cada fase deve mostrar:
+- sigla
+- nome
+- estado
+- resumo:
+  - `x / y entregáveis preenchidos`
+  - `n aprovações pendentes` (apenas resumo)
+  - se existir, `bloqueada por ...`
+
+#### Dentro de cada fase mostrar apenas a lista de entregáveis
+Cada entregável numa linha simples com:
+- nome
+- responsável (se existir)
+- estado visual
+- contadores:
+  - `x docs`
+  - `y fotos`
+  - `z notas`
+
+#### Acções por entregável:
+- `Ver`
+- `+ Nota`
+- `Apagar`
+
+Não mostrar:
+- upload inline
+- histórico de versões inline
+- lista completa de documentos inline
+- bloco grande de fotografias inline
+- bloco completo de aprovações inline
+
+---
+
+### 4. Estado visual do entregável
+Criar helper simples:
+
+```js
+function isDeliverableFilled(deliverable) {
+  const docs = (deliverable.documents || []).filter(d => (d.fileType || 'document') === 'document').length;
+  const photos = (deliverable.documents || []).filter(d => d.fileType === 'photo').length;
+  return docs > 0 || photos > 0 || deliverable.status === 'done' || deliverable.status === 'approved';
+}
+```
+
+Regras:
+- verde = preenchido
+- cinzento = por preencher
+
+As notas sozinhas **não** tornam o entregável verde.
+
+---
+
+### 5. Botão “Ver” no entregável
+Ao clicar “Ver”, abrir modal simples com:
+- nome
+- responsável
+- lista curta de documentos
+- lista curta de fotografias
+- lista de notas
+
+Sem upload nesta modal.
+Sem histórico de versões nesta modal.
+
+---
+
+### 6. Reorganizar a tab Documentos
+A tab Documentos passa a ser o único sítio para upload.
+
+No topo:
+- `Carregar Documento`
+- `Carregar Fotografia`
+
+No modal de upload pedir:
+- fase
+- entregável
+- tipo (`document` ou `photo`)
+- ficheiro
+- nota da versão
+
+Se for fotografia:
+- guardar no mesmo `deliverable.documents`
+- com `fileType: 'photo'`
+
+Manter:
+- pesquisa
+- filtros
+- histórico de versões
+- preview
+
+Adicionar filtro por tipo:
+- Todos
+- Documentos
+- Fotografias
+
+---
+
+### 7. Notas
+Implementar mutations mínimas para notas de entregável:
+- `addDeliverableNote(projectId, deliverableId, note)`
+- `removeDeliverableNote(projectId, deliverableId, noteId)`
+
+Na UI de Fases e Entregáveis:
+- permitir adicionar nota ao entregável
+- permitir apagar nota do entregável
+
+Não criar sistema de comentários avançado.
+
+---
+
+### 8. Limpeza da UI
+Se o toggle de vista compacta/detalhada da tab Fases continuar a aumentar confusão, remover esse toggle e deixar apenas uma vista clara.
+
+A nova vista deve ser:
+- mais curta
+- mais legível
+- mais operacional
+- menos técnica
+
+---
+
+## COMPATIBILIDADE
+- não quebrar dados existentes
+- documentos sem `fileType` = `document`
+- entregáveis sem `notes` = `[]`
+- não remover `phase.notes` nem `phase.photos`, apenas deixar de os usar como centro da UI nesta tab
+
+---
+
+## CRITÉRIOS DE ACEITAÇÃO
+
+### Fases e Entregáveis
+- vejo fases de forma clara
+- vejo entregáveis de forma clara
+- verde/cinzento funciona
+- consigo adicionar entregável
+- consigo apagar entregável
+- ao apagar entregável apaga tudo o que está dentro dele
+- consigo adicionar/apagar notas
+- não faço upload nesta tab
+
+### Documentos
+- consigo carregar documento
+- consigo carregar fotografia
+- escolho fase + entregável no upload
+- consigo filtrar documentos vs fotografias
+- histórico e preview continuam a funcionar
+
+### UX
+- a tab Fases e Entregáveis ficou claramente mais simples
+- a informação deixou de estar confusa
+- o modo simples continua leve
+
+---
+
+## O QUE NÃO FAZER
+- não criar tab nova só para notas
+- não criar nova entidade complexa para ficheiros
+- não mexer em quotes
+- não mexer em financeiro
+- não mexer em portais
+- não mexer no router
+- não fazer refactors grandes fora desta área
